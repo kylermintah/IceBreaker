@@ -1,0 +1,207 @@
+::-webkit-input-placeholder {
+    /* Chrome */
+    color: #c8d3d6;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #c8d3d6;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #c8d3d6;
+    opacity: 1;
+}
+
+:-moz-placeholder {
+    /* Firefox 4 - 18 */
+    color: #c8d3d6;
+    opacity: 1;
+}
+
+.topleft {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+
+.mainimage {
+    height: auto;
+    opacity: 0.3;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child {
+    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.developer-tag {
+    font-size:12px; 
+    color: #607397; 
+    font-family:Lato;
+}
+
+img {
+    height: auto;
+}
+
+a.button:link,
+a.button:visited {
+    background-color: #507fff;
+    border-radius: 15px 15px 15px 15px;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Lato;
+}
+
+.form-submit-button {
+    display: block;
+    text-align: center;
+    background-color: #507fff;
+    border-radius: 15px 15px 15px 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Lato;
+}
+
+textarea{
+    padding: 10px;
+    background-color: #607397; 
+    color: white;
+    border-radius: 15px 15px 15px 15px;
+    min-height:200px;
+    min-width:200px;
+    max-width:500px;
+    line-height: 2;
+    font-size: larger;
+    height:100%;
+    width:100%;
+    border:1px solid white;
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 15px 15px 15px 15px;
+    cursor: pointer;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 15px 15px 15px 15px;
+    cursor: pointer;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 15px 15px 15px 15px;
+    cursor: pointer;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+    border-radius: 15px 15px 15px 15px;
+    cursor: pointer;
+  }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 30;
+    width: 100%;
+    font-size:12px; 
+    color: #607397; 
+    font-family:Lato;
+    text-align: center;
+  }
+
+a.external-link:link,
+a.external-link:visited {
+    color: #607397;
+    text-decoration: none;
+    font-family: Lato;
+}
+.arrow{
+    background-color: transparent;
+    border-radius: 15px 15px 15px 15px;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: x-large;
+    font-family: Lato;
+}
+.form-submit-button input {
+    display: block;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding: 10px 25px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Lato;
+}
+
+.form-submit-button:hover,
+.form-submit-button:active {
+    background-color: #6c93ff;
+}
+
+a.button:hover,
+a.button:active {
+    background-color: #6c93ff;
+}
+
+a.nav:link,
+a.nav:visited {
+    background-color: transparent;
+    border-radius: 15px 15px 15px 15px;
+    display: inline-block;
+}

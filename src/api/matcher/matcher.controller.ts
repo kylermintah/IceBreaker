@@ -5,14 +5,14 @@
 /* eslint-disable max-len */
 // const EventModel = require('../../models/events/events.model');
 
-import {ControllerInterface} from '../../utils/controller.interface';
+import { ControllerInterface } from '../../utils/controller.interface';
 import path, { relative } from 'path';
 // import UserFunctions from './users.functions';
 import * as express from 'express';
 import MatcherRoutes from './matcher.routes.config';
 import Debug from 'debug';
 import validator from 'validator';
-var spawn = require("child_process").spawn; 
+import {spawn} from 'child_process';
 const debug = Debug('matchers.controller');
 
 class MatcherController implements ControllerInterface {
@@ -23,35 +23,36 @@ class MatcherController implements ControllerInterface {
   }
 
   public initializeRoutes() {
-    this.router.post(MatcherRoutes.rootPath, this.runMatch);
-    this.router.get(MatcherRoutes.runMatch, this.showAboutPage);
+    this.router.get(MatcherRoutes.rootPath, this.showMatchForm);
+    this.router.post(MatcherRoutes.runMatch, this.runMatch);
   }
-  
-  showAboutPage = async (req:express.Request, res:express.Response) => {
+
+  showMatchForm = async (req: express.Request, res: express.Response) => {
     res.status(200)
-    .render(path.join(__dirname, '../public/views/about'));
+      .render(path.join(__dirname, '../public/views/match'));
   };
 
-  runMatch = async (req:express.Request, res:express.Response) => {
+  runMatch = async (req: express.Request, res: express.Response) => {
+    var process = spawn('py', [
+      path.join(__dirname, '../../services/matcher.py'), 
+      req.body.entryList
+    ]
+    )
     
-      
-    // Parameters passed in spawn - 
-    // 1. type_of_script 
-    // 2. list containing Path of the script 
-    //    and arguments for the script  
-      
-    // E.g : http://localhost:3000/name?firstname=Mike&lastname=Will 
-    // so, first name = Mike and last name = Will 
-    var process = spawn('python',['../../services/matcher.py', 
-                            req.query.entries] ); 
-  
-    // Takes stdout data from script which executed 
-    // with arguments and send this data to res object 
-    process.stdout.on('data', function(data:any) { 
+    // path.join(__dirname, '../../services/matcher.py')
+    process.stdout.on('data', function (data) {
       res.status(200)
-      .render(path.join(__dirname, '../public/views/match-results'), 
-      {results: String(data)});
-    } ) 
+      .render(path.join(__dirname, '../public/views/results'),
+        { results: String(data) });
+    });
+
+    process.stderr.on('data', function (data) {
+      console.error(`stderr: ${data}`);
+    });
+
+    process.on('close', function (code) {
+      console.log(code);
+    });
   };
 
 }
