@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <style>
+        .topright {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            font-size: 18px;
+            margin-top: 30px;
+            margin-right: 40px;
+        }
+
+        .mainimage {
+            height: auto;
+            opacity: 0.3;
+        }
+
+        .centered {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child {
+            margin-top: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        img {
+            height: auto;
+        }
+
+        a.button:link,
+        a.button:visited {
+            background-color: #507fff;
+            border-radius: 15px 15px 15px 15px;
+            color: white;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: Lato;
+        }
+
+        a.button:hover,
+        a.button:active {
+            background-color: #6c93ff;
+        }
+
+        a.nav:link,
+        a.nav:visited {
+            background-color: transparent;
+            border-radius: 15px 15px 15px 15px;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+
+<body style="background-color:#3A465C;">
+    <div class="container">
+        <div class="child" , style="text-align: center;">
+            <img class=mainimage, src='/images/aang.gif' , alt='4ourge logo' , height='100' , width='100' ,
+                class="center">
+            <h1 style="font-size:32px; color: #ffffff; font-family:Lato" ,>
+                ICE BREAKER
+            </h1>
+            <div class="good">
+                <p style="font-size:16px; color: #FFBC00; font-family:Lato">
+                    <b>a random 1:1 match generator for new teammates!</b><br><br><br>
+                    <center>
+                        <a href="https://dev.wedoo.app/" target="_blank" class="button">
+                            Get Started!
+                        </a>
+                    </center>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="topright" style="" method="POST" action = "/about">
+        <a href="/about" class="button">
+            about
+        </a>
+    </div>
+</body>
+
+</html>
