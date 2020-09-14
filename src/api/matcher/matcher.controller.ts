@@ -33,7 +33,7 @@ class MatcherController implements ControllerInterface {
   };
 
   runMatch = async (req: express.Request, res: express.Response) => {
-    var process = spawn('py', [
+    var process = spawn('python', [
       path.join(__dirname, '../../services/matcher.py'), 
       req.body.entryList
     ]
