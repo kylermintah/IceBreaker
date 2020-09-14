@@ -11,7 +11,6 @@ import path, { relative } from 'path';
 import * as express from 'express';
 import MatcherRoutes from './matcher.routes.config';
 import Debug from 'debug';
-import validator from 'validator';
 import {spawn} from 'child_process';
 const debug = Debug('matchers.controller');
 
