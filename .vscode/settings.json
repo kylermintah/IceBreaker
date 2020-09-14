@@ -1,5 +1,9 @@
 {
     "python.linting.pylintEnabled": true,
     "python.linting.mypyEnabled": false,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ]
 }
