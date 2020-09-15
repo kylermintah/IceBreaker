@@ -1,13 +1,5 @@
-/* eslint-disable no-invalid-this */
-/* eslint-disable new-cap */
-/* eslint-disable require-jsdoc */
-/* eslint-disable no-unused-vars */
-/* eslint-disable max-len */
-// const EventModel = require('../../models/events/events.model');
-
 import { ControllerInterface } from '../../utils/controller.interface';
 import path, { relative } from 'path';
-// import UserFunctions from './users.functions';
 import * as express from 'express';
 import MatcherRoutes from './matcher.routes.config';
 import Debug from 'debug';

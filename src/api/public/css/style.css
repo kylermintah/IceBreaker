@@ -20,6 +20,10 @@
     opacity: 1;
 }
 
+.main {
+    background-color:#3A465C;
+}
+
 .topleft {
     position: absolute;
     top: 8px;
